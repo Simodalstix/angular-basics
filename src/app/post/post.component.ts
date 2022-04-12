@@ -1,4 +1,4 @@
-import { Component, Input, EventEmitter } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-post',
@@ -7,5 +7,5 @@ import { Component, Input, EventEmitter } from '@angular/core';
 })
 export class PostComponent {
   @Input('img') postImg = ''
-  
+  @Output() imgSelected = new EventEmitter<string>()
 }
